@@ -1,0 +1,139 @@
+Source: kuryr-libnetwork
+Section: python
+Priority: optional
+Maintainer: Tobias Urdin <tobias@busybox.se>
+Build-Depends:
+ debhelper (>=9),
+ dh-python,
+ openstack-pkg-tools,
+ python-all,
+ python-pbr,
+ python-setuptools,
+ python3-all,
+ python3-pbr,
+ python3-setuptools,
+ python3-sphinx,
+Build-Depends-Indep:
+ docker-ce (>= 2.4.2),
+ python-coverage (>= 4.5),
+ python-ddt (>= 1.0.1),
+ python-hacking (= 0.12.0),
+ python-os-testr (>= 1.0.0),
+ python-oslo.serialization (>= 2.24.0),
+ python-openstackdocstheme (>= 1.18.1),
+ python-oslotest (>= 1:3.2.0),
+ python-subunit (>= 1.2.0),
+ python-reno (>= 2.5.0),
+ python-sphinx (>= 1.6.2),
+ python-testscenarios (>= 0.4),
+ python-testtools (>= 2.3.0),
+ python-babel (>= 2.4.0),
+ python-flask (= 0.10.1-2build2),
+ python-ipaddress (>= 1.0.16),
+ python-jsonschema (>= 2.6.0),
+ python-kuryr-lib (>= 0.5.0),
+ python-neutron-lib (>= 1.11.0),
+ python-os-client-config (>= 1.28.0),
+ python-oslo.concurrency (>= 3.20.0),
+ python-oslo.config (>= 4.6.0),
+ python-oslo.log (>= 3.30.0),
+ python-oslo.utils (>= 3.31.0),
+ python-pbr (>= 2.0.0),
+ python-neutronclient (>= 6.3.0),
+ python-six (>= 1.10.0),
+ python3-coverage (>= 4.5),
+ python3-ddt (>= 1.0.1),
+ python3-hacking (= 0.12.0),
+ python3-os-testr (>= 1.0.0),
+ python3-oslo.serialization (>= 2.24.0),
+ python3-openstackdocstheme (>= 1.18.1),
+ python3-oslotest (>= 1:3.2.0),
+ python3-subunit (>= 1.2.0),
+ python3-reno (>= 2.5.0),
+ python3-sphinx (>= 1.6.2),
+ python3-testscenarios (>= 0.4),
+ python3-testtools (>= 2.3.0),
+ python3-babel (>= 2.4.0),
+ python3-flask (= 0.10.1-2build2),
+ python3-jsonschema (>= 2.6.0),
+ python3-kuryr-lib (>= 0.5.0),
+ python3-neutron-lib (>= 1.11.0),
+ python3-os-client-config (>= 1.28.0),
+ python3-oslo.concurrency (>= 3.20.0),
+ python3-oslo.config (>= 4.6.0),
+ python3-oslo.log (>= 3.30.0),
+ python3-oslo.utils (>= 3.31.0),
+ python3-pbr (>= 2.0.0),
+ python3-neutronclient (>= 6.3.0),
+ python3-six (>= 1.10.0),
+Standards-Version: 4.1.2
+Homepage: https://launchpad.net/kuryr
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.4
+XS-Testsuite: autopkgtest
+
+Package: python-kuryr-libnetwork
+Architecture: all
+Depends:
+ docker-ce (>= 2.4.2),
+ python-babel (>= 2.4.0),
+ python-flask (= 0.10.1-2build2),
+ python-ipaddress (>= 1.0.16),
+ python-jsonschema (>= 2.6.0),
+ python-kuryr-lib (>= 0.5.0),
+ python-neutron-lib (>= 1.11.0),
+ python-os-client-config (>= 1.28.0),
+ python-oslo.concurrency (>= 3.20.0),
+ python-oslo.config (>= 4.6.0),
+ python-oslo.log (>= 3.30.0),
+ python-oslo.utils (>= 3.31.0),
+ python-pbr (>= 2.0.0),
+ python-neutronclient (>= 6.3.0),
+ python-six (>= 1.10.0),
+ ${misc:Depends},
+ ${python:Depends},
+Suggests:
+ python-kuryr-libnetwork-doc
+Description: Kuryr-libnetwork is Kuryr's Docker libnetwork driver (Python 2)
+ Kuryr-libnetwork is Kuryr's Docker libnetwork driver that
+ uses Neutron to provide networking services
+ .
+ This package installs the library for Python 2.7
+
+Package: python3-kuryr-libnetwork
+Architecture: all
+Depends:
+ docker-ce (>= 2.4.2),
+ python3-babel (>= 2.4.0),
+ python3-flask (= 0.10.1-2build2),
+ python3-jsonschema (>= 2.6.0),
+ python3-kuryr-lib (>= 0.5.0),
+ python3-neutron-lib (>= 1.11.0),
+ python3-os-client-config (>= 1.28.0),
+ python3-oslo.concurrency (>= 3.20.0),
+ python3-oslo.config (>= 4.6.0),
+ python3-oslo.log (>= 3.30.0),
+ python3-oslo.utils (>= 3.31.0),
+ python3-pbr (>= 2.0.0),
+ python3-neutronclient (>= 6.3.0),
+ python3-six (>= 1.10.0),
+ ${misc:Depends},
+ ${python3:Depends},
+Suggests: python-kuryr-libnetwork-doc
+Description: Kuryr-libnetwork is Kuryr's Docker libnetwork driver (Python 3)
+ Kuryr-libnetwork is Kuryr's Docker libnetwork driver that
+ uses Neutron to provide networking services
+ .
+ This package installs the library for Python 3.
+
+Package: python-kuryr-libnetwork-doc
+Architecture: all
+Section: doc
+Depends:
+ ${misc:Depends},
+ ${sphinxdoc:Depends},
+Description: Kuryr-libnetwork is Kuryr's Docker libnetwork driver (common documentation)
+ Kuryr-libnetwork is Kuryr's Docker libnetwork driver that
+ uses Neutron to provide networking services
+ .
+ This is the common documentation package.

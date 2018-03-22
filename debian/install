@@ -1,0 +1,2 @@
+etc/kuryr.spec usr/lib/docker/plugins/kuryr
+usr/lib/python*/dist-packages/*
